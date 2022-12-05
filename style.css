@@ -1,0 +1,109 @@
+#body{
+    
+    background-color: aqua;
+}
+#calculator{
+    
+    background-color: rgba(239, 236, 236, 0.947);
+    text-align: center;
+   border: rgb(47, 95, 255);
+   border-style: dotted;
+   width: 700px;
+   height: 450px;
+    margin-left: 300px;
+    margin-right: 250px;
+    padding: 65px;
+    border-radius: 20px;
+    
+
+}
+.all{
+    display: flex;
+}
+.heading{
+    text-align: center;
+    justify-content: center;
+}
+#data{
+    width: 300px;
+    line-height: 1cm;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 25px;
+    
+    
+    
+}
+#value{
+    width: 300px;
+    border: 3px solid black;  
+    background-color: rgba(5, 80, 5, 0.908);
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 45px;
+    font-size: 20px;
+    
+}
+.h3,#tip-amount{
+    display: inline-block;   
+}
+  .h4,#total{
+    display: inline-block;
+  }
+ #btn{
+    width: 130px;
+    height: 40px;
+    background-color: ghostwhite;
+    font-size: 18px;
+    margin-top: 15px;
+    border-radius: 30px;
+ }
+ #bill,#tip,#people{
+    background-color: ghostwhite;
+ }
+ #totalamount{
+    width: 150px;
+    height: 40px;
+    margin: auto;
+    font-size: 25px;
+    color: greenyellow;
+    background-color: rgba(8, 125, 8, 0.908);
+
+ }
+ @media(max-width:500px){
+    #body{
+        width: 5%;
+        margin-left: -292px;
+    }
+    #calculator{
+        width: 231px;
+        height: 380px;
+        margin-left: 375px;
+        margin-right: 232px;
+        padding: 26px;
+        border-radius: 20px
+  }
+  .all{
+    display: flex;
+    flex-direction: column;
+}
+.heading{
+    margin-top: -12px;
+    }
+  #data{
+    width: 234px;
+    line-height: 29px;
+   font-size: 22px;
+    margin-top: -20px;
+    margin-bottom: 13px;
+  }
+  #value{
+    width: 189px;
+   padding: 45px;
+    margin-left: -27px;
+    line-height: 0px;
+    font-size: 16px;
+  }
+  
+}
