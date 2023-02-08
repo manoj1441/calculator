@@ -13,9 +13,18 @@
     <div class="all">
   <div id="data">
     <label>Bill</label><br>
-    <input type="number" id="bill" placeholder="$"><br>
+    <input id="bill" type="number" placeholder="$"><br>
     <label>Tip%</label><br>
-    <input type="number" id="tip" placeholder="%"><br>
+    <input type="number" id="tip" placeholder="%" name="tip"><br>
+      <button class="btn" value="5%" onclick="tip.value = '5' " >5%</button>
+      <button class="btn" value="10%" onclick="tip.value = '10' " >10%</button>
+      <button class="btn" value="15%" onclick="tip.value = '15' " >15%</button>
+      <button class="btn" value="20%" onclick="tip.value = '20' " >20%</button>
+      <button class="btn" value="25%" onclick="tip.value = '25' " >25%</button>
+     </input><br>
+    
+    
+
     <label>Number of People</label><br>
     <input type="number" id="people" placeholder="number"><br>
     <button onclick="myfun()" id="btn">Calculate</button>
@@ -23,30 +32,80 @@
 
 
   <div id="value">
-  <p class="h3" style="color: white;"><b>Tip Amount</b> / person=</p>
-  <h1 id="tip-amount" style="color: aquamarine;">$0.00</h1><br>
-  <p class="h4" style="color: white;"><b>Total</b> / person=</p>
+    <div class="tip">
+      <div class="h3">
+        <p  style="color: white;"><b>Tip Amount</b> </p>
+        <p class="person" style="color: white; margin-top: -12px;">/person</p></div>
+        <h1 id="tip-amount" style="color: aquamarine;">$0.00</h1><br>
+
+    </div>
+    
+
+   
+     <div class="tip1">
+      <div class="h4">
+  <p  style="color: white;"><b>Total</b> </p>
+  <p style="color: white; margin-top: -22px;"> /person</p></div>
   <h1 id="total" style="color: aquamarine;">$0.00</h1><br>
-   <button id="totalamount" style="color: aquamarine;"></button>
+  </div>
+  
+ <button id="totalamount"></button>
+
  </div>
 </div>
+
+<button id="clear">reset</button>
 </div>
 </body>
 <script>
+ 
+ 
+
+
   function myfun(){
-  const bill=parseInt(document.getElementById("bill").value);
+
+   //Entered bill value
+  
+   const bill=parseInt(document.getElementById("bill").value);
+
+  //Entered tip value
+
   const tip=parseInt(document.getElementById("tip").value);
+
   const people=parseInt(document.getElementById("people").value);
 
-   const tipamount=(bill*tip)/100;
-   const total=bill+tipamount;
-   const totalamount=total*people;
+  //tip amount perperson
+
+   const tipamount=(bill/people)*(tip/100);
+   // total amount per person
+   const total=(bill/people)+tipamount;
+
+   //total amount
+   const totalamount=bill+(bill*tip)/100;
 
    console.log(tipamount);
+   
    document.getElementById("tip-amount").innerText=`$${Math.floor(tipamount)}.00`;
+
    document.getElementById("total").innerText=`$${Math.floor(total)}.00`;
+
    document.getElementById("totalamount").innerText=`$${Math.floor(totalamount)}.00`;
 
   }
+  let clear=document.querySelector('#clear');
+  let input=document.querySelectorAll('input');
+  let h1=document.querySelectorAll('h1');
+  clear.addEventListener('click',()=>{
+    
+    input.forEach(input=>input.value='');
+   
+
+    document.getElementById("total").innerText='$0.00';
+    document.getElementById("tip-amount").innerText='$0.00';
+    document.getElementById("totalamount").innerText='';
+  })
+
+  
+ 
 </script>
 </html>

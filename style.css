@@ -45,12 +45,34 @@
     font-size: 20px;
     
 }
-.h3,#tip-amount{
-    display: inline-block;   
+.tip{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 }
-  .h4,#total{
-    display: inline-block;
-  }
+.h3{
+  margin-right:194px;
+  margin-top: -60px;
+   
+}
+#tip-amount{
+  margin-top: -75px;
+  margin-right: -130px;
+}
+ .tip1{
+  display: flex;
+  flex-direction: column;
+  margin-top: -31px;
+
+ }
+ .h4{
+  margin-right: 244px;
+  margin-top: 2px;
+ }
+ #total{
+  margin-top: -75px;
+  margin-right: -130px;
+ }
  #btn{
     width: 130px;
     height: 40px;
@@ -58,6 +80,10 @@
     font-size: 18px;
     margin-top: 15px;
     border-radius: 30px;
+ }
+ .btn{
+  background-color: rgb(9, 176, 101);
+  color: white;
  }
  #bill,#tip,#people{
     background-color: ghostwhite;
@@ -68,17 +94,27 @@
     margin: auto;
     font-size: 25px;
     color: greenyellow;
-    background-color: rgba(8, 125, 8, 0.908);
+    background-color: rgba(8, 125, 31, 0.908);
 
  }
- @media(max-width:500px){
+ #clear{
+  width: 130px;
+  height: 40px;
+  
+  margin-top: 75px;
+  background-color: rgb(19, 128, 153);
+  color: aliceblue;
+  font-size: 21px;
+  border-radius: 10px;
+ }
+ @media(max-width:400px){
     #body{
         width: 5%;
-        margin-left: -292px;
+        margin-left: -325px;
     }
     #calculator{
         width: 231px;
-        height: 380px;
+        height: 480px;
         margin-left: 375px;
         margin-right: 232px;
         padding: 26px;
@@ -87,6 +123,7 @@
   .all{
     display: flex;
     flex-direction: column;
+    height: 442px;
 }
 .heading{
     margin-top: -12px;
@@ -100,10 +137,34 @@
   }
   #value{
     width: 189px;
+    height: 180px;
    padding: 45px;
     margin-left: -27px;
     line-height: 0px;
     font-size: 16px;
+  }
+  .tip{
+    margin-top: -30px;
+  }
+  .h3{
+    margin-top: -20px;
+    line-height: 14px;
+  }
+  #tip-amount{
+    margin-top: 20px;
+    margin-bottom: -7px;
+  }
+  .person{
+    margin-bottom: 10px;
+  }
+  .h4{
+    line-height: 21px;
+  }
+  #totalamount{
+    margin-top: 80px;
+  }
+  #clear{
+    margin-top: 0px;
   }
   
 }
